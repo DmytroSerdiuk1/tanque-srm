@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Costs = () => {
-    return (
-        <div>
+	return (
+		<div>
             Costs
-        </div>
-    );
+		</div>
+	);
 };
 
 export default Costs;

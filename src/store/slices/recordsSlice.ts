@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 
 export interface Record {
@@ -12,22 +12,22 @@ export interface RecordsSliceState {
 }
 
 const initialState: RecordsSliceState = {
-    records: []
-}
+	records: []
+};
 
 const recordsSlice = createSlice({
-    name: 'records',
-    initialState,
-    reducers: {
-        addRecordsEvents: (state, action: PayloadAction<Record>) => {
-            state.records.push(action.payload)
-        },
-        setRecordsEvents: (state, action: PayloadAction<Record[]>) => {
-            state.records = action.payload
-        }
-    }
-})
+	name: 'records',
+	initialState,
+	reducers: {
+		addRecordsEvents: (state, action: PayloadAction<Record>) => {
+			state.records.push(action.payload);
+		},
+		setRecordsEvents: (state, action: PayloadAction<Record[]>) => {
+			state.records = action.payload;
+		}
+	}
+});
 
-export const {addRecordsEvents, setRecordsEvents} = recordsSlice.actions
+export const {addRecordsEvents, setRecordsEvents} = recordsSlice.actions;
 
-export default recordsSlice.reducer
+export default recordsSlice.reducer;

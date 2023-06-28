@@ -1,7 +1,7 @@
 import appReducer from './slices/appSlice';
-import recordsSlice from "./slices/recordsSlice";
+import recordsSlice from './slices/recordsSlice';
 
 export const rootReducer = {
-    app: appReducer,
-    records: recordsSlice
-}
+	app: appReducer,
+	records: recordsSlice
+};

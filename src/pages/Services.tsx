@@ -1,19 +1,18 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 
 const Services = () => {
-    const handleAddServices = useCallback(async ({name, category, price, description }: any) => {
+	// const handleAddServices = useCallback(async ({name, category, price, description }: any) => {
+	// }, []);
 
-    }, [])
 
-
-    return (
-        <div>
+	return (
+		<div>
             Services
-            <div onClick={() => handleAddServices({name: 'name', category: `CategoryName${Math.random()}`, price: 123, description: '12312312adssdasd'})}>
-                asdasd
-            </div>
-        </div>
-    );
+			{/*<div onClick={() => handleAddServices({name: 'name', category: `CategoryName${Math.random()}`, price: 123, description: '12312312adssdasd'})}>*/}
+			{/*    asdasd*/}
+			{/*</div>*/}
+		</div>
+	);
 };
 
 export default Services;

@@ -3,19 +3,19 @@ import React, {useEffect} from 'react';
 import { db } from '../firebase';
 
 const Home = () => {
-    useEffect(() => {
-        setDoc(doc(db, "cities", "LA"), {
-            name: "Los Angeles",
-            state: "CA",
-            country: "USA"
-        });
-    }, [])
+	useEffect(() => {
+		setDoc(doc(db, 'cities', 'LA'), {
+			name: 'Los Angeles',
+			state: 'CA',
+			country: 'USA'
+		});
+	}, []);
 
-    return (
-        <div>
+	return (
+		<div>
             Home
-        </div>
-    );
+		</div>
+	);
 };
 
 export default Home;

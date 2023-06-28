@@ -1,0 +1,29 @@
+{
+  "navigation": {
+    "home": "Головна",
+    "visitors": "Відвідувачі",
+    "schedules": "Записи",
+    "cost": "Витрати",
+    "services": "Послуги"
+  },
+  "auth": {
+    "logout": "Вийти",
+    "login": "Увійти"
+  },
+  "records": {
+    "didNotConnectCalendar": "Ви не підлючили Google Calendar",
+    "connect": "Підключити",
+    "save": "Зберегти",
+    "selectService": "Вибрати послугу",
+    "userRecord": "Запис клієнта",
+    "startOfSession": "Початок прийому",
+    "endOfSession": "Закінчення прийому"
+  },
+  "visitor": {
+    "visitorName": "Імя",
+    "visitorNumber": "Номер телефону",
+    "cost": "Прибуток з клієнта",
+    "lastMeet": "Остання зустріч",
+    "more": "Детально"
+  }
+}

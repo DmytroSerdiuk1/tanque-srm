@@ -1,0 +1,29 @@
+{
+  "navigation": {
+    "home": "Home",
+    "visitors": "Visitors",
+    "schedules": "Schedules",
+    "cost": "Cost",
+    "services": "Services"
+  },
+  "auth": {
+    "logout": "Logout",
+    "login": "Login"
+  },
+  "records": {
+    "didNotConnectCalendar": "You didn't connect google calendar",
+    "connect": "Connect",
+    "save": "Save",
+    "selectService": "Select Services",
+    "userRecord": "User record",
+    "startOfSession": "Start of session",
+    "endOfSession": "End of session"
+  },
+  "visitor": {
+    "visitorName": "Visitor Name",
+    "visitorNumber": "Visitor number",
+    "cost": "Cost",
+    "lastMeet": "Last meet",
+    "more": "More"
+  }
+}
