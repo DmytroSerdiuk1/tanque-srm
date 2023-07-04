@@ -8,6 +8,7 @@ import {
 	ListSubheader,
 	MenuItem,
 	Select,
+	styled,
 	SvgIcon
 } from '@mui/material';
 import {useLocation, useNavigate} from 'react-router-dom';
@@ -15,6 +16,15 @@ import {ROUTES} from '../../enums/routes';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import {logout} from '../../store/slices/appSlice';
+
+const StyledListItemButton = styled(ListItemButton)(({theme}) => ({
+	borderRadius: '7px',
+	margin: '0 5px',
+
+	'.Mui-selected': {
+		background: '#000'
+	}
+}));
 
 const Sidebar = () => {
 	const dispatch = useDispatch();
@@ -27,7 +37,7 @@ const Sidebar = () => {
 	}, []);
 
 	return (
-		<Drawer sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}} open={true}
+		<Drawer sx={{ borderRadius: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}} open={true}
 			anchor={'left'} variant={'persistent'}>
 			<List
 				sx={{
@@ -36,7 +46,7 @@ const Sidebar = () => {
 				component="nav"
 				aria-labelledby="nested-list-subheader"
 				subheader={
-					<ListSubheader sx={{fontSize: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} component="div" id="nested-list-subheader">
+					<ListSubheader sx={{padding: '5px 5px 10px 5px', fontSize: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} component="div" id="nested-list-subheader">
 						<span>
                             Nomid SRM Panel
 						</span>
@@ -53,7 +63,7 @@ const Sidebar = () => {
 					</ListSubheader>
 				}
 			>
-				<ListItemButton selected={ROUTES.HOME === pathname} onClick={() => navigate(ROUTES.HOME)}>
+				<StyledListItemButton selected={ROUTES.HOME === pathname} onClick={() => navigate(ROUTES.HOME)}>
 					<ListItemIcon>
 						<SvgIcon fontSize={'medium'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 							fill="currentColor">
@@ -64,8 +74,8 @@ const Sidebar = () => {
 						</SvgIcon>
 					</ListItemIcon>
 					<ListItemText primary={t('navigation:home')}/>
-				</ListItemButton>
-				<ListItemButton selected={ROUTES.VISITORS === pathname} onClick={() => navigate(ROUTES.VISITORS)}>
+				</StyledListItemButton>
+				<StyledListItemButton selected={ROUTES.VISITORS === pathname} onClick={() => navigate(ROUTES.VISITORS)}>
 					<ListItemIcon>
 						<SvgIcon fontSize={'medium'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 							fill="currentColor">
@@ -77,8 +87,8 @@ const Sidebar = () => {
 						</SvgIcon>
 					</ListItemIcon>
 					<ListItemText primary={t('navigation:visitors')}/>
-				</ListItemButton>
-				<ListItemButton selected={ROUTES.RECORDS === pathname} onClick={() => navigate(ROUTES.RECORDS)}>
+				</StyledListItemButton>
+				<StyledListItemButton selected={ROUTES.RECORDS === pathname} onClick={() => navigate(ROUTES.RECORDS)}>
 					<ListItemIcon>
 						<SvgIcon fontSize={'medium'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 							fill="currentColor" className="w-6 h-6">
@@ -90,8 +100,8 @@ const Sidebar = () => {
 						</SvgIcon>
 					</ListItemIcon>
 					<ListItemText primary={t('navigation:schedules')}/>
-				</ListItemButton>
-				<ListItemButton selected={ROUTES.COSTS === pathname} onClick={() => navigate(ROUTES.COSTS)}>
+				</StyledListItemButton>
+				<StyledListItemButton selected={ROUTES.COSTS === pathname} onClick={() => navigate(ROUTES.COSTS)}>
 					<ListItemIcon>
 						<SvgIcon fontSize={'medium'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 							fill="currentColor" className="w-6 h-6">
@@ -104,8 +114,8 @@ const Sidebar = () => {
 						</SvgIcon>
 					</ListItemIcon>
 					<ListItemText primary={t('navigation:cost')}/>
-				</ListItemButton>
-				<ListItemButton selected={ROUTES.SERVICES === pathname} onClick={() => navigate(ROUTES.SERVICES)}>
+				</StyledListItemButton>
+				<StyledListItemButton selected={ROUTES.SERVICES === pathname} onClick={() => navigate(ROUTES.SERVICES)}>
 					<ListItemIcon>
 						<SvgIcon fontSize={'medium'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
 							fill="currentColor" className="w-6 h-6">
@@ -118,17 +128,17 @@ const Sidebar = () => {
 						</SvgIcon>
 					</ListItemIcon>
 					<ListItemText primary={t('navigation:services')}/>
-				</ListItemButton>
+				</StyledListItemButton>
 			</List>
 			<List>
-				<ListItemButton onClick={() => dispatch(logout())}>
+				<StyledListItemButton onClick={() => dispatch(logout())}>
 					<ListItemIcon>
 						<SvgIcon fontSize={'medium'} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
 							<path fillRule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm5.03 4.72a.75.75 0 010 1.06l-1.72 1.72h10.94a.75.75 0 010 1.5H10.81l1.72 1.72a.75.75 0 11-1.06 1.06l-3-3a.75.75 0 010-1.06l3-3a.75.75 0 011.06 0z" clipRule="evenodd" />
 						</SvgIcon>
 					</ListItemIcon>
 					<ListItemText primary={t('auth:logout')}/>
-				</ListItemButton>
+				</StyledListItemButton>
 			</List>
 		</Drawer>
 	);

@@ -7,6 +7,8 @@ import {store} from './store/store';
 import 'dayjs/locale/de';
 
 import './translations';
+import {ThemeProvider} from '@mui/material';
+import {theme} from './theme';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -14,9 +16,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<Suspense fallback={'Loading...'}>
-		<Provider store={store}>
-			<App/>
-		</Provider>
+		<ThemeProvider theme={theme}>
+			<Provider store={store}>
+				<App/>
+			</Provider>
+		</ThemeProvider>
 	</Suspense>
 );
 

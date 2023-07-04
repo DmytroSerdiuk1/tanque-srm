@@ -13,10 +13,11 @@ import Costs from './pages/Costs';
 import Records from './pages/Records';
 import Services from './pages/Services';
 import Visitors from './pages/Visitors';
+import Register from './pages/Register';
+import CodeVerification from './pages/CodeVerification';
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs';
 import {LocalizationProvider} from '@mui/x-date-pickers';
 import { SnackbarProvider } from 'notistack';
-import CodeVerification from './pages/CodeVerification';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 				<BrowserRouter>
 					<Routes>
 						<Route path={ROUTES.LOGIN} element={<Login/>}/>
+						<Route path={ROUTES.REGISTER} element={<Register/>}/>
 						<Route path={ROUTES.CODE_VERIFICATION} element={<CodeVerification/>}/>
 
 						<Route element={<Layout/>}>
