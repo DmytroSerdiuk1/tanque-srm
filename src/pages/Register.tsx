@@ -1,11 +1,9 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {Box, Button, TextField} from '@mui/material';
-import {useDispatch} from 'react-redux';
-import {useNavigate} from 'react-router-dom';
 import {ROUTES} from '../enums/routes';
+import {useNavigate} from 'react-router-dom';
 
-const Login = () => {
-	const dispatch = useDispatch();
+const Register: FC = () => {
 	const navigate = useNavigate();
 	return (
 		<Box sx={{
@@ -20,11 +18,12 @@ const Login = () => {
 		}}>
 			<TextField fullWidth label="Email" variant="outlined"/>
 			<TextField fullWidth type={'password'} label="Password" variant="outlined"/>
+			<TextField fullWidth type={'password'} label="Password" variant="outlined"/>
 			<Button onClick={() => {
 				navigate(ROUTES.CODE_VERIFICATION);
-			}} fullWidth size={'large'} variant={'contained'}>Login</Button>
+			}} fullWidth size={'large'} variant={'contained'}>Register</Button>
 		</Box>
 	);
 };
 
-export default Login;
+export default Register;

@@ -68,6 +68,8 @@
     ]
   },
   "devDependencies": {
+    "@stripe/react-stripe-js": "2.1.1",
+    "@stripe/stripe-js": "1.54.1",
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
     "eslint": "8.43.0",

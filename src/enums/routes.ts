@@ -1,6 +1,7 @@
 export enum ROUTES {
     HOME = '/',
     LOGIN = '/login',
+    REGISTER = '/register',
     CODE_VERIFICATION = '/code-verification',
 
     VISITORS = '/visitors',
